@@ -1,6 +1,8 @@
 # Papersheet - the subtle one
 ## responsive Blogger Template
 
+![preview](https://raw.githubusercontent.com/mynimi/Papersheet/master/papersheet.png)
+
 Dieses Template richtet sich vor allem an Blogger, die Wert auf Text legen und keine Widgets mögen. Es ist ein einfaches Theme, bei dem es darum geht die Lesbarkeit des Texts zu garantieren und keinen ablenkdenden Schnickschnack zu integrieren.
 
 Dieses Template wurde mit Sass geschrieben, die Sass files sind hier zu finden. Ausserdem habe ich einen Overwrite geschrieben, mit dem Anpassungen super schnell gehen.
