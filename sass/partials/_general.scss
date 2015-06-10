@@ -1,0 +1,83 @@
+/*  2. General Style
+---------------------------------------------------------*/
+body{
+    font:{
+        family: $font_one;
+        size: 22px;
+    }
+
+    line-height: 1.5;
+    color: $black;
+    background: $white;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 2.1 Containers */
+.content{
+    width: 80%;
+    margin: 30px auto;
+    max-width: 1500px;
+    border: 1px solid darken($linkcolor, 5%);
+    box-sizing: border-box;
+    padding: 50px 7%;
+    border-radius: 3px;
+}
+
+footer{
+    font:{
+        size: .5em;
+        family: $font_two;
+    }
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 0px 5%;
+}
+
+/* 2.2 Headings */
+h1, h2, h3, h4, h5, h6{
+    font-weight: 600;
+    font-style: italic;
+    padding: 5px 0px;
+    letter-spacing: 2px;
+}
+
+
+h5{
+    font-size: 1em;
+}
+
+h4{
+    font-size: 1.2em;
+}
+
+h3{
+    font-size: 1.4em;
+}
+
+h2{
+    font-size: 1.6em;
+}
+
+h1{
+    font-size: 1.8em;
+}
+
+/* 2.3 Links */
+a{
+    text-decoration: none;
+    transition: all 1s ease;
+    color: lighten($linkcolor, 10%);
+
+    &:hover{
+        transition: all .3s ease;
+        color: $linkhovercolor;
+    }
+}

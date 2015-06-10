@@ -1,0 +1,43 @@
+/*  4. Article
+---------------------------------------------------------*/
+/* 4.1 General */
+article{
+    text-align: justify;
+
+    + article{
+        margin-top: 30px;
+    }
+
+    header{
+        line-height: 1;
+
+        .post-title h1{
+            padding: 2px 0px;
+        }
+
+        .post-date h3{
+            font: {
+                family: $font_two;
+                style: normal;
+                size: .6em;
+                weight: normal;
+            }
+
+            text-transform: uppercase;
+            border-top: 1px solid lighten($black, 80%);
+            color: lighten($black, 40%);
+        }
+
+    }
+
+    .post-author{
+        @extend %visuallyhidden;
+    }
+}
+
+/* 4.2 Pager */
+.pager{
+    @include flexbox(row-reverse, nowrap, space-between, center);
+    border-top: 1px solid lighten($black, 80%);
+    margin-top: 30px;
+}

@@ -1,0 +1,20 @@
+/*  3. Header
+---------------------------------------------------------*/
+.head{
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: normal;
+
+    h3{
+        font:{
+            family: $font_two;
+            style: normal;
+            size: .6em;
+            weight: normal;
+        }
+
+        text-transform: uppercase;
+        color: lighten($black, 40%);
+    }
+}
+

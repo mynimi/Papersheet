@@ -1,0 +1,175 @@
+//Width Settings
+//--------------------------------------------------
+// width of the container. Use percentage here, in order to keep responsiveness
+$contentwidth: 80%;
+
+// the max-width of the container. Even if your contentwidth percentage might be bigger, it will never be wider than this setting (use px here)
+$contentmaxwidth: 1500px;
+
+
+// Typography Settings
+//--------------------------------------------------
+
+// the basic font size, the other font settings will change respectively.
+$root_font_size: 22px;
+
+// font weight of the headings, use: [NUMBER | bold | normal]
+$heading_weight: 600;
+
+// font style of the headings, use: [normal | italic]
+$heading_style: italic;
+
+// text-decoration for links in normal and hover stat, use[none | underline | overline | line-through ]
+$link_decoration: none;
+$link_decoration_hover: none;
+
+// various text aligns, use: [left, right, center, justify]
+$header_align: center;
+$article_align: justify;
+$nav_align: center;
+
+// the main font settings. Use any font, but make sure to link it in the <head>-Section of your template
+$mainfont: 'Crimson Text';
+$mainfont_fallback_one: 'Times New Roman';
+$mainfont_fallback_two: 'serif';
+
+//letterspacing ot the main font
+$font_one_letterspacing: 2px;
+
+// this is the accent font, it is used for blog description, post date and footer credits
+$accentfont: 'Raleway';
+$accentfont_fallback_one: 'Calibri';
+$accentfont_fallback_two: 'sans-serif';
+
+// letterspacing of the accent font
+$font_two_letterspacing: 2px;
+
+// text transform accent font, Use: [none | capitalize | uppercase | lowercase]
+$font_two_text_transform: uppercase;
+// Colors Settings
+//--------------------------------------------------
+
+// Papersheet Default Colors
+$white: #FDFDFD;
+$black: #121212;
+$red: #85073b;
+
+// font color if no other is defined
+$mainfontcolor: $black;
+
+// main background color
+$mainbgcolor: $white;
+
+// color used for anchor tags
+$linkcolor: $red;
+
+// anchor tags color on hover
+$linkhovercolor: complement($red);
+
+// comments background color
+$comments_bg: lighten($black, 85%);
+
+//--------------------------------------------------------------------------------------------------------------
+// Only Change the following if you know, what you are doing...
+//--------------------------------------------------------------------------------------------------------------
+$font_one: $mainfont, $mainfont_fallback_one, $mainfont_fallback_two;
+$font_two: $accentfont, $accentfont_fallback_one, $accentfont_fallback_two;
+
+body{
+    font:{
+        family: $font_one;
+        size: $root_font_size;
+    }
+
+    color: $mainfontcolor;
+    background: $mainbgcolor;
+}
+
+.content{
+    width: $contentwidth;
+    max-width: $contentmaxwidth;
+}
+
+footer{
+    font:{
+        family: $font_two;
+    }
+
+    letter-spacing: $font_two_letterspacing;
+    text-transform: $font_two_text_transform;
+}
+
+/* 2.2 Headings */
+h1, h2, h3, h4, h5, h6{
+    font-weight: $heading_weight;
+    font-style: $heading_style;
+    letter-spacing: $font_one_letterspacing;
+}
+
+a{
+    text-decoration: $link_decoration;
+    color: lighten($linkcolor, 10%);
+
+    &:hover{
+        text-decoration: $link_decoration_hover;
+        color: $linkhovercolor;
+    }
+}
+
+.head{
+    text-align: $header_align;
+
+    h3{
+        font:{
+            family: $font_two;
+        }
+
+        text-transform: $font_two_text_transform;
+        color: lighten($black, 40%);
+    }
+}
+
+article{
+    text-align: $article_align;
+
+    header{
+
+        .post-date h3{
+            font: {
+                family: $font_two;
+            }
+
+            text-transform: $font_two_text_transform;
+        }
+    }
+}
+
+.comments .comment-block,
+.comments .comment-thread.inline-thread .comment-block {
+    background: $comments_bg;
+}
+
+.comments .comment-block:after{
+    border-color: transparent $comments_bg transparent transparent;
+}
+
+.comment-header {
+    font-family: $font_one;
+    letter-spacing: $font_one_letterspacing;
+}
+
+.comment-actions{
+    font-family: $font_two;
+    text-transform: $font_two_text_transform;
+    letter-spacing: $font_two_letterspacing;
+}
+
+.PageList{
+    font-family: $font_one;
+    font-style: $heading_style;
+    letter-spacing: $font_one_letterspacing;
+
+    ul{
+        text-align: $nav_align;
+    }
+}
