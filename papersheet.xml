@@ -7,7 +7,13 @@
 <title><data:blog.pageTitle/></title>
 <b:include data='blog' name='all-head-content'/>
 
-<b:skin><![CDATA[*/
+ <b:skin><![CDATA[*/
+-----------------------------------------------
+Blogger Template Style
+Name:     Papersheet
+Designer: Myriam Frisano
+URL:      http://halfapx.com
+----------------------------------------------- */
 ]]></b:skin>
 
 <!-- Font Awesome -->
